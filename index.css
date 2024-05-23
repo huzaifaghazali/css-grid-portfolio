@@ -3,37 +3,49 @@ body {
 }
 
 .container {
-   max-width: 90%;
-   margin: 0 auto;
-   padding: 0 16px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 .navbar {
-   display: flex;
-   justify-content: space-between;
-   padding: 64px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 0;
 }
 .navbar .left {
-   font-size: 32px;
-   font-weight: bold;
+  font-size: 32px;
+  font-weight: bold;
 }
 .navbar .right {
-   width: 400px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .navbar .right a {
-   text-decoration: none;
-   color: black;
+  text-decoration: none;
+  color: black;
 }
 .navbar .right a:hover {
-   text-decoration: underline;
- }
+  text-decoration: underline;
+}
 
- .navbar .right img {
-   width: 24px;
-   height: 24px;
- } 
+.navbar .right img {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar .bar {
+  background-color: black;
+  height: 4px;
+  width: 36px;
+  margin: 3px;
+  border-radius: 10px;
+}
+
+.navbar .hamburger {
+  display: none;
+}
 
 .project-grid {
   display: grid;
@@ -116,14 +128,14 @@ body {
 }
 
 .footer {
-   text-align: center;
-   padding: 64px;
- }
+  text-align: center;
+  padding: 64px;
+}
 
 @media only screen and (max-width: 1100px) {
-   .container {
-      max-width: 100%;
-    }
+  .container {
+    max-width: 100%;
+  }
   .project-grid {
     max-width: 100%;
     grid-template-areas:
@@ -137,10 +149,32 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-   .footer {
-      font-size: 14px;
-      padding: 32px;
-    }
+  .project-grid {
+    margin-top: 100px;
+  }
+  .navbar {
+    padding: 16px 24px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: white;
+    width: 100%;
+  }
+  .navbar .right {
+    display: none;
+  }
+  .navbar .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer {
+    font-size: 14px;
+    padding: 32px;
+  }
   .project-grid {
     grid-template-areas:
       'eth eth'
