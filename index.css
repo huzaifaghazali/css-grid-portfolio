@@ -80,6 +80,10 @@ body {
   cursor: pointer;
 }
 
+.overlay.white {
+   color: white;
+ }
+
 @media only screen and (max-width: 1100px) {
   .project-grid {
     max-width: 100%;
@@ -105,4 +109,7 @@ body {
       'foam foam'
       'dimensional dimensional';
   }
+  .project .overlay {
+   font-size: 24px;
+ }
 }
